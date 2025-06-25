@@ -1,0 +1,64 @@
+/* nav-style.css */
+
+/* Reset default list styling */
+.navbar, .navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Positioning & layout */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111;
+  color: white;
+  padding: 0.75rem 1rem;
+  z-index: 999;
+  font-family: sans-serif;
+}
+
+/* Links */
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+/* Hamburger & menu container */
+.hamburger {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 3.5rem;
+  right: 1rem;
+  background: #222;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+/* Menu links */
+.menu a {
+  padding: 0.25rem 0;
+}
+
+/* Responsive behavior */
+@media (min-width: 600px) {
+  .hamburger { display: none; }
+  .menu {
+    display: flex !important;
+    flex-direction: row;
+    background: none;
+    position: static;
+    padding: 0;
+  }
+}
