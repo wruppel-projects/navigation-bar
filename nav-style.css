@@ -1,13 +1,9 @@
-/* nav-style.css */
-
-/* Reset default list styling */
 .navbar, .navbar ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-/* Positioning & layout */
 .navbar {
   position: fixed;
   top: 0;
@@ -23,18 +19,17 @@
   font-family: sans-serif;
 }
 
-/* Links */
 .navbar a {
   color: white;
   text-decoration: none;
   margin: 0 0.5rem;
 }
 
-/* Hamburger & menu container */
 .hamburger {
   font-size: 1.5rem;
   cursor: pointer;
 }
+
 .menu {
   display: none;
   flex-direction: column;
@@ -46,14 +41,18 @@
   border-radius: 4px;
 }
 
-/* Menu links */
 .menu a {
   padding: 0.25rem 0;
 }
 
-/* Responsive behavior */
+.menu.show {
+  display: flex;
+}
+
 @media (min-width: 600px) {
-  .hamburger { display: none; }
+  .hamburger {
+    display: none;
+  }
   .menu {
     display: flex !important;
     flex-direction: row;
